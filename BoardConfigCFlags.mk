@@ -71,3 +71,9 @@ ifdef BOARD_USES_EXYNOS_DATASPACE_FEATURE
     $(warning BOARD_USES_EXYNOS_DATASPACE_FEATURE is set, please use soong variables instead:)
     $(warning $$(call soong_config_set,uses_exynos_dataspace_feature,$(BOARD_USES_EXYNOS_DATASPACE_FEATURE)))
 endif
+
+ifdef BOARD_USES_FIPS_COMPLIANCE_RNG_DRV
+    $(call soong_config_set,exyrngd,uses_fips_compliance_rng_drv,$(BOARD_USES_FIPS_COMPLIANCE_RNG_DRV))
+    $(warning BOARD_USES_FIPS_COMPLIANCE_RNG_DRV is set, please use soong variables instead:)
+    $(warning $$(call soong_config_set,uses_exynos_dataspace_feature,$(BOARD_USES_FIPS_COMPLIANCE_RNG_DRV)))
+endif
